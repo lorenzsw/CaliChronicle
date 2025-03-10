@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strava Redirect</title>
+</head>
+<body>
+    <h1>Strava Auth erfolgreich!</h1>
+    <p>Code: <span id="code"></span></p>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("code").innerText = params.get("code");
+    </script>
+</body>
+</html>
